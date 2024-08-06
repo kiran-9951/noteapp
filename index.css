@@ -1,0 +1,324 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Root colors */
+:root {
+  --main-bg: #e5e8ee;
+  --white: #fff;
+  --second-color: #0e121a;
+  --primary-color: #171c26;
+  --blue: #3b6bf7;
+  --text-color: #3b404d;
+  --color: #272d39;
+  --color-red: #d82148;
+  --color-green: #00c897;
+  --color-purple: #8a39e1;
+}
+
+/* Body styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--main-bg);
+}
+
+/* Wrapper styles */
+.wrapper {
+  width: 100%;
+  max-width: 600px; /* Increased max width */
+  padding: 30px;
+  background: var(--second-color);
+  border-radius: 20px;
+  box-shadow: 0 4px 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items in the center */
+  justify-content: center; /* Center items vertically */
+}
+
+.wrapper .content .title {
+  display: flex;
+  align-items: center;
+  font-size: 1.9em;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.wrapper .content .title img {
+  width: 40px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between the image and the text */
+}
+
+.wrapper .content .eInput {
+  margin-top: 10px;
+  position: relative;
+}
+
+.wrapper .content .eInput input {
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 50px;
+  outline: none;
+  border: none;
+  background: var(--primary-color);
+  color: var(--main-bg);
+}
+
+.wrapper .content .eInput span {
+  position: absolute;
+  color: var(--main-bg);
+  left: 20px;
+  top: 16px;
+}
+
+.wrapper .content .notepad {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-height: 500px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin: 80px 0;
+  margin-top: 20px;
+}
+
+.wrapper .content .notepad::-webkit-scrollbar {
+  width: 8px;
+}
+
+.wrapper .content .notepad::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+.wrapper .content .notepad .note-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align notes */
+}
+
+.wrapper .content .notepad .note-content .notes {
+  width: 100%; /* Ensure full width within the container */
+  max-width: 300px; /* Increased max width */
+  padding: 20px;
+  background-color: var(--primary-color);
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word; /* Ensure text wraps within the div */
+  overflow-wrap: break-word; /* Break long words to fit the container */
+}
+
+.wrapper .content .notepad .note-content .notes .note-title {
+  font-weight: 500;
+  font-size: 1.3em;
+  color: var(--blue);
+}
+
+.wrapper .content .notepad .note-content .notes .note-body {
+  color: var(--white); /* Set the note body text color to white */
+}
+
+.wrapper .content .notepad .note-content .note-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.wrapper .content .notepad .note-content .note-actions .tweet_btn {
+  text-decoration: none;
+  color: var(--color-green);
+  font-weight: 500;
+}
+
+.wrapper .content .notepad .note-content .note-actions .delete-btn {
+  border: none;
+  background: var(--color-red);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wrapper .content .notepad .note-content .date {
+  color: var(--white); /* Set the date text color to white */
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.wrapper .content .notepad .tabs {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 9 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.wrapper .content .notepad .tabs .add_note {
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+  background: var(--blue);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.4em;
+  box-shadow: 0 2px 2px var(--blue);
+  float: right;
+  cursor: pointer;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 600px; /* Increased max width */
+  background: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.container .content .eInput input {
+  width: 100%;
+  height: 58px;
+  outline: none;
+  border: none;
+  font-size: 1.9em;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.container .content .return span {
+  font-size: 2em;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.container .content .input {
+  margin-left: 20px;
+}
+
+.container .content .input textarea {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+  border-left: 3px solid var(--blue);
+  resize: none;
+}
+
+.container .content .input #submit {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: var(--blue);
+  border-radius: 5px;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 1px 1px var(--blue);
+  position: relative;
+  left: 300px;
+}
+
+.container .content .select .select_content .c1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.container .content .select .select_content .c1 .categories {
+  font-weight: 500;
+  color: var (--blue);
+  user-select: none;
+  cursor: pointer;
+  border: 2px solid var (--blue);
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.categories:hover {
+  background-color: var(--second-color);
+  color: var(--white);
+}
+
+/* Selected category style */
+.categories.selected {
+  background-color: var(--second-color);
+  color: var(--white);
+}
+
+/* SweetAlert2 custom width and height */
+.swal2-popup {
+  width: 500px !important; /* Increased width */
+  max-height: 80% !important; /* Adjust height as needed */
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .wrapper, .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .wrapper .content .title {
+    font-size: 1.5em;
+  }
+
+  .wrapper .content .eInput input, 
+  .container .content .eInput input {
+    height: 45px;
+    font-size: 1em;
+  }
+
+  .wrapper .content .notepad .note-content .notes {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .container .content .input textarea {
+    height: 150px;
+    font-size: 1em;
+  }
+
+  .container .content .input #submit {
+    width: 100%;
+    left: 0;
+    font-size: 1em;
+  }
+
+  .wrapper .content .notepad .tabs .add_note {
+    font-size: 1.2em;
+  }
+}

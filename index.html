@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOTES APP</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <h1 class="title">
+          <img src="./notes.png" alt="Notes" class="notes-icon" />
+          Notes
+        </h1>
+
+        <div class="notepad">
+          <div class="note-content"></div>
+          <div class="tabs">
+            <div class="add_note" id="add_note">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="display: none">
+      <div class="content">
+        <div class="return" id="return">
+          <span class="material-symbols-outlined">line_start_arrow_notch</span>
+        </div>
+        <div class="eInput">
+          <input type="text" placeholder="header title" id="title" />
+        </div>
+        <div class="input">
+          <textarea
+            id="text-field"
+            cols="30"
+            rows="10"
+            placeholder="write note"
+          ></textarea>
+          <button id="submit">save</button>
+        </div>
+        <div class="select">
+          <div class="select_content">
+            <div class="c1">
+              <div class="categories" id="s1">Business</div>
+              <div class="categories" id="s2">Education</div>
+              <div class="categories" id="s3">General</div>
+            </div>
+            <div class="add_cat"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
